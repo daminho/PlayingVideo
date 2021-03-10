@@ -8,5 +8,7 @@ function changeLink(link){
 		need+=Link[index];
 	}
 	newLink = firstPart+need+secondPart;
-	document.getElementById('userLink').src = newLink
+	console.log(Link)
+	console.log(newLink)
+	document.getElementById('clickme').src = newLink
 }

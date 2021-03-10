@@ -10,17 +10,37 @@
     <!--Your code here-->
     <div style = "text-align: center;">
 		<h1 style = "font-size: 50px;">Playing Youtube Videos Without Advertisement </h1>
-		<h2 style = "font-size: 30px;">Enjoy your videos!</h2>
+		<h2 style = "font-size: 30px;" id="header2">Enjoy your videos!</h2>
 		<div style="align-content: center">
 			<form>
 				<label>Link: </label>
 				<input id="userLink" type="text" name="userLink" style="width: 700px; height: 20px">
-				<button type="button" onclick="changeLink()">Play</button>
+				<button type="button" onclick="changeLink()" id="clickme">Play</button>
 			</form>
 		</div>
-		<iframe id = "userLink" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe id = "userLinkk" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	</div>
-  <script src="main.js"></script>
+  <script type="text/javascript" language="javascript">
+  	function changeLink(){
+	var Link = document.getElementById('userLink').value;
+	firstPart = 'https://www.youtube.com/embed/';
+	
+	var index;
+	var need = "";
+	for(index = 32; index<Link.length; index++){
+		need+=Link[index];
+	}
+	console.log(need)
+	newLink = firstPart+need;
+	console.log(Link)
+	console.log(newLink)
+	document.getElementById('userLinkk').setAttribute('src' , newLink);
+
+	}
+  </script>
   </body>
 </html>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/HsyQV9ZZcQw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HsyQV9ZZcQw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
