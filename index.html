@@ -23,20 +23,25 @@
 		<iframe id = "userLinkk" width="784" height="411" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	</div>
+<!-- https://youtu.be/__1KR-bdKRY -->
   <script type="text/javascript" language="javascript">
   	function changeLink(){
 	var Link = document.getElementById('userLink').value;
 	firstPart = 'https://www.youtube.com/embed/';
-	
 	var index;
 	var need = "";
-	for(index = 32; index<Link.length; index++){
-		need+=Link[index];
+	var newLink ="";
+	if(Link[13]=='.'){
+		for(index = 17;index<17+11;index++){
+			need+=Link[index]
+		}
 	}
-	console.log(need)
+	else{
+		for(index = 32; index<32+11; index++){
+			need+=Link[index];
+		}
+	}
 	newLink = firstPart+need;
-	console.log(Link)
-	console.log(newLink)
 	document.getElementById('userLinkk').setAttribute('src' , newLink);
 
 	}
