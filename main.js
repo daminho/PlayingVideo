@@ -1,11 +1,4 @@
 
-inputText = document.getElementById("userLink");
-inputText.addEventListener("keyup", function(event) {
-  		if (event.keyCode === 13) {
-   			event.preventDefault();
-   			document.getElementById("clickme").click();
-  	}
-});
 
 function changeLink(link){
 	var Link = document.getElementById('userLink').value;
@@ -21,4 +14,13 @@ function changeLink(link){
 	console.log(newLink)
 	document.getElementById('clickme').src = newLink
 }
+
+inputText = document.getElementById("userLink");
+inputText.addEventListener("keyup", function(event) {
+  		if (event.keyCode === 13) {
+   			event.preventDefault();
+   			document.getElementById("clickme").click();
+  	}
+});
+
 
