@@ -15,12 +15,12 @@ function changeLink(link){
 	document.getElementById('clickme').src = newLink
 }
 
-inputText = document.getElementById("userLink");
-inputText.addEventListener("keyup", function(event) {
-  		if (event.keyCode === 13) {
-   			event.preventDefault();
-   			document.getElementById("clickme").click();
-  	}
-});
+// inputText = document.getElementById("userLink");
+// inputText.addEventListener("keyup", function(event) {
+//   		if (event.keyCode === 13) {
+//    			event.preventDefault();
+//    			document.getElementById("clickme").click();
+//   	}
+// });
 
 
